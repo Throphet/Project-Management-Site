@@ -34,4 +34,12 @@ addForm.addEventListener('submit', function(e){
 
 });
 
-
+// Hide tasks
+const hideBox = document.querySelector('#hide');
+hideBox.addEventListener('change', function(e){
+    if(hideBox.checked == true) {
+        list.style.display = "none";
+    } else {
+        list.style.display = "initial";
+    }
+});
