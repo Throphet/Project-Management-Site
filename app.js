@@ -1,12 +1,9 @@
-const wmf = document.querySelector("#management li:nth-child(2) .name");
-//console.log(wmf);
-
-let tasks = document.querySelector("#management li .name");
-// console.log(tasks);
-
 tasks = document.querySelectorAll("#management li .name");
-// console.log(tasks);
 
-Array.from(tasks).forEach(function(task) {
-    console.log(task);
+Array.from(tasks).forEach(function(task){
+    task.textContent += " test";
 })
+
+const taskList = document.querySelector("#management");
+// taskList.innerHTML = "<h2>no tasks left?</h2>";
+taskList.innerHTML += "<h2>no tasks left</h2>";
