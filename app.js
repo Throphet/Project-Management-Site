@@ -1,8 +1,12 @@
-let titles = document.getElementsByClassName('title');
+const wmf = document.querySelector("#management li:nth-child(2) .name");
+//console.log(wmf);
 
-// console.log(Array.isArray(titles));
-// console.log(Array.isArray(Array.from(titles)))
+let tasks = document.querySelector("#management li .name");
+// console.log(tasks);
 
-Array.from(titles).forEach(function(item) {
-    console.log(item);
+tasks = document.querySelectorAll("#management li .name");
+// console.log(tasks);
+
+Array.from(tasks).forEach(function(task) {
+    console.log(task);
 })
