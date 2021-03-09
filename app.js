@@ -1,9 +1,7 @@
-tasks = document.querySelectorAll("#management li .name");
+const banner = document.querySelector('#page-banner');
+console.log("#page-banner node type is: ", banner.nodeType);
+console.log("#page-banner name type is: ", banner.nodeName);
+console.log("#page-banner has child nodes: ", banner.hasChildNodes());
 
-Array.from(tasks).forEach(function(task){
-    task.textContent += " test";
-})
-
-const taskList = document.querySelector("#management");
-// taskList.innerHTML = "<h2>no tasks left?</h2>";
-taskList.innerHTML += "<h2>no tasks left</h2>";
+const clonedBanner = banner.cloneNode(true);
+console.log(clonedBanner);
