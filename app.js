@@ -1,7 +1,5 @@
-const banner = document.querySelector('#page-banner');
-console.log("#page-banner node type is: ", banner.nodeType);
-console.log("#page-banner name type is: ", banner.nodeName);
-console.log("#page-banner has child nodes: ", banner.hasChildNodes());
+const taskList = document.querySelector('#management');
+console.log("The parent node is: ", taskList.parentNode);
+console.log("The parent node is: ", taskList.parentElement.parentElement);
 
-const clonedBanner = banner.cloneNode(true);
-console.log(clonedBanner);
+console.log(taskList.children);
