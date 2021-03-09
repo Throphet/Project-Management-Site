@@ -43,3 +43,17 @@ hideBox.addEventListener('change', function(e){
         list.style.display = "initial";
     }
 });
+
+const searchBar = document.forms['search-tasks'].querySelector('input');
+searchBar.addEventListener('keyup', function(e){
+    const term = e.target.value.toLowerCase();
+    const tasksList = list.getElementsByTagName('li');
+    Array.from(tasksList).forEach(function(task){
+        const title = task.firstElementChild.textContent;
+        if(title.toLowerCase().indexOf(term) != -1) {
+            task.style.display = 'block';
+        } else {
+            task.style.display = 'none';
+        }
+    })
+})
