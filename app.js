@@ -1,14 +1,9 @@
-let buttons = document.querySelectorAll('#management .done');
+const list = document.querySelector("#management ul");
 
-Array.from(buttons).forEach(function(btn){
-    btn.addEventListener("click", function(e){
+// Setting tasks to done / deleting tasks
+list.addEventListener("click", function(e){
+    if(e.target.className == 'done'){
         const li = e.target.parentElement;
-        li.parentNode.removeChild(li);
-    })
-})
-
-const link = document.querySelector("#page-banner");
-link.addEventListener("click", function(e){
-    e.preventDefault();
-    console.log("navigation to: ", e.target.textContent);
-})
+        list.removeChild(li);
+    } 
+});
