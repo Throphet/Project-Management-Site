@@ -23,6 +23,10 @@ addForm.addEventListener('submit', function(e){
     taskDone.textContent = "✓";
     taskName.textContent = value;
 
+    // Adding classes
+    taskName.classList.add('name');
+    taskDone.classList.add('done');
+
     // Append to document
     li.appendChild(taskName);
     li.appendChild(taskDone);
