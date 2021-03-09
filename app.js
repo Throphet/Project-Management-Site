@@ -1,9 +1,14 @@
-const taskList = document.querySelector('#management');
+let buttons = document.querySelectorAll('#management .done');
 
-console.log(taskList.nextSibling);
-console.log(taskList.nextElementSibling);
+Array.from(buttons).forEach(function(btn){
+    btn.addEventListener("click", function(e){
+        const li = e.target.parentElement;
+        li.parentNode.removeChild(li);
+    })
+})
 
-console.log(taskList.previousSibling);
-console.log(taskList.previousElementSibling);
-
-taskList.previousElementSibling.querySelector("h1").innerHTML += "<br /> Private";
+const link = document.querySelector("#page-banner");
+link.addEventListener("click", function(e){
+    e.preventDefault();
+    console.log("navigation to: ", e.target.textContent);
+})
